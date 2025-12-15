@@ -1,0 +1,2 @@
+- [ ] Add docker image building worflow
+- [ ] add `DISABLE_AUTH` environment variable
