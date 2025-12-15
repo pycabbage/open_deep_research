@@ -38,10 +38,7 @@ jobs:
         uses: astral-sh/setup-uv@v7
 
       - name: Generate Dockerfile
-        run: |
-          uv sync --locked --all-extras --dev
-          uv venv
-          uvx --refresh --from "langgraph-cli[inmem]" --with-editable . --python 3.11 langgraph dockerfile Dockerfile
+        run: uvx --refresh --from "langgraph-cli[inmem]" --with-editable . --python 3.11 langgraph dockerfile Dockerfile
 
       - name: Docker meta
         id: meta
